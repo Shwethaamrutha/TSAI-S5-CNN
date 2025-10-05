@@ -17,6 +17,8 @@ Optimized CNN for MNIST digit classification achieving **99.55% validation accur
 ### **🎯 Model Overview**
 **Model5** represents the ultimate combination of optimal architecture and superior optimizer choice, achieving **99.55% validation accuracy** with **16,480 parameters** in just **13 epochs**.
 
+**Note**: While Model2 achieved the highest validation accuracy of **99.60%**, Model5 was chosen as the winner due to its superior efficiency metrics: faster convergence (13 vs 16 epochs), better train-val gap (-0.06% vs +0.20%), and optimal parameter utilization with the same architecture design.
+
 ### **🏗️ Architecture Design**
 ```python
 class OptimizedNetV5(nn.Module):
