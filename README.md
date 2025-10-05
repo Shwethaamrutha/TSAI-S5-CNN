@@ -8,7 +8,6 @@ Optimized CNN for MNIST digit classification achieving **99.55% validation accur
 - ✅ **Parameter Limit**: < 20,000 (Used: 16,480)
 - ✅ **Epoch Limit**: ≤ 20 (Achieved target in 13)
 - ✅ **Required Components**: Batch Normalization, Dropout, Global Average Pooling
-- ✅ **Train-Val Gap**: < 0.3% (Achieved: -0.06% - validation > training)
 
 ---
 
@@ -107,7 +106,7 @@ class OptimizedNetV5(nn.Module):
 - **Global Average Pooling**: Replaces traditional FC layers (99%+ parameter reduction)
 - **Strategic Dropout**: Minimal 0.02 rate for optimal generalization
 - **Batch Normalization**: After each convolution for stable training
-- **SGD Optimizer**: Superior performance for CNN architectures
+- **SGD Optimizer**: Superior performance for this architecture
 
 ### **📊 Performance Metrics**
 - **Validation Accuracy**: 99.55% (exceeds 99.4% target)
@@ -293,7 +292,7 @@ Target Achievement: ✓ ACHIEVED in 13 epochs (under 20 epoch limit)
 2. **📊 Most Efficient**: 16,480 parameters with 99.55% accuracy
 3. **🏆 Optimal Architecture**: Model2's proven design (10→16→28→16)
 4. **✅ Perfect Generalization**: -0.06% train-val gap (validation > training)
-5. **🚀 SGD Superiority**: Proves "SGD for CNNs, Adam for FC layers"
+5. **🚀 SGD Superiority**: Proves SGD is optimal for this CNN architecture
 
 ### **Technical Learnings:**
 - **SGD + Minimal Dropout (0.02)** = Optimal for CNN training
@@ -344,14 +343,14 @@ Target Achievement: ✓ ACHIEVED in 13 epochs (under 20 epoch limit)
 - **Rationale**: Test if SGD can handle more capacity than Adam
 - **Key Experiment**: Same starting point as Model2 but with 32-channel peak
 - **Dropout Strategy**: Minimal 0.02 (SGD needs less regularization)
-- **Optimizer**: SGD (testing coach's principle)
+- **Optimizer**: SGD (testing optimizer choice)
 
 **Key Learning**:
 - ✅ **SGD superiority confirmed**: Faster convergence (12 epochs vs 16)
 - ❌ **Architecture mismatch**: 10→16→32→16 was too aggressive for SGD
 - 📊 **Parameter explosion**: 18,440 parameters (over constraint)
 - 🎯 **Critical insight**: SGD needs different architecture than Adam
-- 💡 **Coach's wisdom validated**: "SGD for CNNs, Adam for FC layers"
+- 💡 **Optimizer insight**: SGD works better than Adam for this CNN architecture
 - **Important Discovery**: SGD + aggressive architecture = parameter explosion
 
 #### **🔄 Model4 - SGD + Model1 Architecture (SGD + 8→16→32→16)**
@@ -394,7 +393,7 @@ Target Achievement: ✓ ACHIEVED in 13 epochs (under 20 epoch limit)
 3. **Parameter Efficiency**: GAP + 1x1 convolutions = massive savings
 4. **Train-Val Gap Control**: Minimal dropout (0.02) + SGD = perfect generalization (val > train)
 5. **Convergence Speed**: SGD with OneCycleLR = fastest learning
-6. **Coach's Principle Validated**: "SGD for CNNs" proved correct!
+6. **Optimizer Choice Validated**: SGD proved superior for this CNN architecture!
 
 ---
 
@@ -420,4 +419,4 @@ Target Achievement: ✓ ACHIEVED in 13 epochs (under 20 epoch limit)
 
 **Model5 (Model2 + SGD)** represents the perfect synergy of optimal architecture and superior optimizer choice, achieving the project goals with maximum efficiency and fastest convergence.
 
-**Key Success Factor**: Following the coach's principle - **"SGD for CNNs, Adam for FC layers"** - led to the ultimate solution! 🚀
+**Key Success Factor**: **SGD optimizer choice** combined with optimal architecture led to the ultimate solution! 🚀
